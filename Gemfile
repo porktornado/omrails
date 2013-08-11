@@ -1,10 +1,15 @@
 source 'https://rubygems.org'
-
+ruby '2.0.0'
+	gem 'rails', '4.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+group :production do
+	gem 'pg', '0.15'
+		# not sure if this thingy below should be there? Vs. bootstrap?
+	gem 'rails_12factor', '0.0.2'
+end
 
 group :development do
-gem 'sqlite3'
+	gem 'sqlite3'
 end
 
 # Use SCSS for stylesheets
