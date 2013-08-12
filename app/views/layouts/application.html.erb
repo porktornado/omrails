@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Omrails</title>
+  <title>Content in the Pages</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+	<body>
+		<%= render 'layouts/header' %>
 
-<%= yield %>
+		<%= yield %>
 
-</body>
+		<%= render 'layouts/footer' %>
+
+	</body>
+
 </html>
