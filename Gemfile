@@ -22,6 +22,7 @@ gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'
 gem 'jquery-rails', '2.2.1'
 gem 'devise'
+gem 'simple_form'
 
 
 group :doc do
