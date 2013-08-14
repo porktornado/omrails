@@ -3,7 +3,7 @@
   <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
     <%= f.error_notification %>
 
-  <%= f.input :name, label: "name" %>
+  <%= f.input :name %>
   <%= f.input :email, label: "email" %>
   <%= f.input :current_password, label: "current password", autocomplete: "off" %>
   <%= f.input :password, label: "new password", autocomplete: "off" %>
