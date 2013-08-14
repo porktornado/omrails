@@ -1,15 +1,13 @@
-
-
 <% if user_signed_in? %>
 	<h1>you're in.</h1>
  <% else %>
 <div class="hero-unit">
 	<h1>hi.</h1>
-	<p>now presenting
-		<%= link_to "steam labs", "#" %>
-	</p>
-	<p>
+		<p>
+			now presenting steam labs
+		</p>
+		<p>
 			<%= link_to "sign up", new_user_registration_path, class: "btn btn-warning btn-medium" %>
-	</p>
-</div>
+		</p>
+	</div>
 <% end %>
