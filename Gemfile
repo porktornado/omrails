@@ -24,6 +24,7 @@ gem 'jquery-rails', '2.2.1'
 gem 'devise'
 gem 'simple_form'
 gem 'protected_attributes'
+gem 'paperclip', '3.4.2'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

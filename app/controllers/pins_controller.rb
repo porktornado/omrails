@@ -14,6 +14,10 @@ class PinsController < ApplicationController
   def show
   end
 
+  def user_params 
+  params.require(:user).permit(:email, identity_attributes: [:id, :last_name, :first_name]) 
+  end
+
   # GET /pins/new
   def new
     @pin = current_user.pins.new
@@ -74,6 +78,6 @@ class PinsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pin_params
-      params.require(:pin).permit(:description)
+      params.require(:pin).permit(:description, :image)
     end
 end
