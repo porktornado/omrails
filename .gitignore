@@ -20,3 +20,6 @@ doc/
 .project
 *.swp
 .DS_Store
+
+# Ignore Paperclip uploaded files
+/public/system
