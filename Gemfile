@@ -26,6 +26,7 @@ gem 'simple_form'
 gem 'protected_attributes'
 gem 'paperclip', '3.4.2'
 gem 'aws-sdk'
+gem 'faker'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
