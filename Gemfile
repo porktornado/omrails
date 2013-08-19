@@ -27,6 +27,8 @@ gem 'protected_attributes'
 gem 'paperclip', '3.4.2'
 gem 'aws-sdk'
 gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
