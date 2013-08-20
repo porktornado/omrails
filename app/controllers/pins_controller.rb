@@ -12,10 +12,11 @@ class PinsController < ApplicationController
   # GET /pins/1
   # GET /pins/1.json
   def show
+    @pin = Pin.find(params[:id])
   end
 
   def user_params 
-  params.require(:user).permit(:email, identity_attributes: [:id, :last_name, :first_name]) 
+  params.require(:user).permit(:email, identity_attributes: [:id, :name, :last_name, :first_name]) 
   end
 
   # GET /pins/new
