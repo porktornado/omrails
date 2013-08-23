@@ -5,7 +5,7 @@
 	</p>
 	<p>
 	<strong>
-		posted by <%= link_to pin.user.name %>
+		posted by <%= link_to pin.user.name if pin.user %>
 	</strong>
 	</p>
 	<% if current_user == pin.user %>

@@ -6,7 +6,7 @@ class PinsController < ApplicationController
   # GET /pins
   # GET /pins.json
   def index
-    @pins = Pin.order("created_at desc").page(params[:page]).per_page(20)
+    @pins = Pin.order("created_at desc").page(params[:page]).per_page(15)
   end
 
   # GET /pins/1
@@ -26,7 +26,7 @@ class PinsController < ApplicationController
 
   # GET /pins/1/edit
   def edit
-    @pin = current_user.pins.find(params[:id])
+    @pin = Pin.find(params[:id])
   end
 
   # POST /pins
@@ -36,7 +36,7 @@ class PinsController < ApplicationController
 
     respond_to do |format|
       if @pin.save
-        format.html { redirect_to @pin, notice: 'done.' }
+        format.html { redirect_to @pin, notice: 'saved.' }
         format.json { render action: 'show', status: :created, location: @pin }
       else
         format.html { render action: 'new' }
@@ -48,7 +48,7 @@ class PinsController < ApplicationController
   # PATCH/PUT /pins/1
   # PATCH/PUT /pins/1.json
   def update
-    @pin = current_user.pins.find(params[:id])
+    @pin = Pin.find(params[:id])
     respond_to do |format|
       if @pin.update(pin_params)
         format.html { redirect_to @pin, notice: 'bravo' }
@@ -63,7 +63,7 @@ class PinsController < ApplicationController
   # DELETE /pins/1
   # DELETE /pins/1.json
   def destroy
-    @pin = current_user.pins.find(params[:id])
+    @pin = Pin.find(params[:id])
     @pin.destroy
     respond_to do |format|
       format.html { redirect_to pins_url }
